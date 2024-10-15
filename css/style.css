@@ -1,0 +1,133 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.barra_lateral {
+    background-color: #2c3e50;
+    width: 250px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+.barra_lateral a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 0;
+    display: block;
+}
+
+.barra_lateral a i {
+    margin-right: 10px;
+}
+
+.barra_lateral img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.barra_lateral .line {
+    border-top: 1px dashed #7f8c8d;
+    margin: 20px 0;
+}
+
+.barra_lateral .foto_perfil img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+.contenido {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.barra_busqueda {
+    background-color: #ecf0f1;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.barra_busqueda i {
+    margin-right: 10px;
+}
+
+.barra_busqueda input {
+    border: none;
+    background: none;
+    outline: none;
+    width: 100%;
+}
+
+/* Estilos Responsive */
+@media (max-width: 768px) {
+    .contenedor {
+        flex-direction: column;
+    }
+
+    .barra_lateral {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .barra_lateral a {
+        font-size: 16px;
+        padding: 5px 0;
+    }
+
+    .contenido {
+        padding: 10px;
+    }
+
+    .barra_busqueda {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .barra_lateral {
+        text-align: center;
+    }
+
+    .barra_lateral a {
+        font-size: 14px;
+        padding: 3px 0;
+    }
+
+    .barra_lateral .foto_perfil img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .barra_busqueda i {
+        font-size: 14px;
+    }
+
+    .barra_busqueda input {
+        font-size: 14px;
+    }
+}
+
+ 
+
+  
+
+
+  
