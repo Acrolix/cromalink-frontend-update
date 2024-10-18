@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.contenedor_login{
+    background-color: #2a2a2a;
+    height: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login_formulario {
+    background-color: #3c3c3c;
+    padding: 100px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 411px;
+    text-align: center;
+}
+
+.logo_login {
+    width: 403px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #ffffff;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.input_text {
+   position: relative;
+   margin-bottom: 20px;
+}
+
+.input_text i {
+    position: absolute;
+    top: 12px;
+    left: 49px;
+    color: #9e9e9e;
+}
+
+.input_text input {
+    width: 73%;
+    padding: 12px 12px 12px 40px;
+    font-size: 17px;
+    border: 2px solid #666;
+    border-radius: 30px;
+    background-color: #4d4d4d;
+    color: #ffffff;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.input_text input:focus {
+    border-color: #e9a21f;
+}
+
+.boton_login {
+    margin-top: 20px;
+}
+
+.boton_login button {
+    width: 32%;
+    background-color: #31adbd;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.boton_login button:hover {
+    background-color: #e9a21f;
+}
+
+.registrar_link  {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.registrar_link a{
+    color: #e9a21f; 
+    text-decoration: none; 
+    font-weight: bold;
+}
+
+.registrar_link a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .contenedor_login {
+        padding: 10px; 
+    }
+
+    .login_formulario {
+        padding: 30px;
+    }
+}
+
+
+
+
