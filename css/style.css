@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    margin: 0%;
+    padding: 0%;
     box-sizing: border-box;
 }
 
@@ -18,7 +18,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 100vh;
 }
 
 .barra_lateral a {
@@ -50,13 +49,6 @@ body {
     margin-top: 20px;
 }
 
-.contenido {
-    flex-grow: 1;
-    padding: 20px;
-    background-color: #2C3E3F;
-    margin-bottom: -40px;
-}
-
 .barra_busqueda {
     background-color: #ecf0f1;
     padding: 10px;
@@ -67,7 +59,13 @@ body {
 
 .barra_busqueda i {
     margin-right: 10px;
+    transition: transform 0.3s;
 }
+
+.barra_busqueda:hover i {
+    transform: rotate(360deg);
+}
+
 
 .barra_busqueda input {
     border: none;
@@ -91,10 +89,6 @@ body {
     .barra_lateral a {
         font-size: 16px;
         padding: 5px 0;
-    }
-
-    .contenido {
-        padding: 10px;
     }
 
     .barra_busqueda {
@@ -126,9 +120,83 @@ body {
     }
 }
 
- 
+h4{
+    padding: 0 10%;
+}
 
-  
+a{
+    color: #ffffffea;
+}
 
+.contenido{
+    margin-left: 0;
+    flex: 1;
+    width: 100%;
+    position: relative;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    color: #ffffff;
+    overflow-y: auto;
+}
 
-  
+.sub-contenido{
+    color: #ffffffea;
+}
+
+.boton-sub-contenido{
+    color: #ffffffea;
+    cursor: pointer;
+}
+
+.linea_punteada{
+    border: none;
+    border-top: 2px solid black;
+    width: 100%;
+    height: 1%;
+    margin: 40px 0 20px 0;
+}
+
+.debajo_punteada{
+    position: relative;
+    width: 80%;
+    text-align: left;
+}
+
+.toogle-container{
+    display: flex;
+    align-items: center;
+}
+
+.toogle{
+    display: none;
+}
+
+.toogle-label{
+    width: 60px;
+    height: 30px;
+    background-color: #ccc;
+    border-radius: 15px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s
+}
+
+.toogle-label:before {
+    content: '';
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    background-color: white;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.3s;
+}
+
+.toogle:checked + .toogle-label {
+    background-color: #4caf50;
+}
+
+.toogle:checked + .toogle-label:before {
+    transform: translateX(30px);
+}
