@@ -9,9 +9,9 @@ function cambiar_color(){
     contenido.style.color = 'black';
 
     for(let i = 0; i < sub_contenido.length; i++){
-    sub_contenido[i].style.color = 'black';
+    sub_contenido[i].style.color = '#1B1F3E';
 
-    boton.style.color = 'black';
+    boton.style.color = '#1B1F3E';
     boton.textContent = 'MODO OSCURO'
     }
     }
@@ -40,3 +40,13 @@ function guardado(){
 }
 
 window.onload = guardado;
+
+const seguidores = document.getElementById('toogle');
+
+seguidores.addEventListener('change', () => {
+    if (toogle.checked) {
+        console.log('Activado');
+    } else {
+        console.log('Desactivado');
+    }
+});
