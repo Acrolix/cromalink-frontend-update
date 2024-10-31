@@ -201,3 +201,8 @@ a{
 .toogle:checked + .toogle-label:before {
     transform: translateX(30px);
 }
+
+.flecha{
+    position: relative;
+    left: 100%;
+}
