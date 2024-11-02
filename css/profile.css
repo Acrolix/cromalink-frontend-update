@@ -1,0 +1,44 @@
+.perfil {
+    width: 100%;
+    padding: 20px;
+}
+
+.perfil-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;;
+}
+
+.foto_perfil_grande {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.perfil-info h2 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.bio {
+    font-size: 14px;
+    color: #666;
+}
+
+.estadisticas span {
+    margin-right: 20px;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+}
+
+.galeria .post img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+
