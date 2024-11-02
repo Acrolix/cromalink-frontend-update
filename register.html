@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro</title>
+    <link rel="stylesheet" href="css/register.css" />
+  </head>
+  <body>
+    <form id="registroForm">
+      <img src="img/logo.svg" alt="CromaLink Logo" />
+      <h1 class="titulo">Registro</h1>
+
+      <input
+        type="text"
+        id="nombre"
+        name="first_name"
+        required
+        placeholder="Nombre"
+      />
+      <div class="error" id="errorNombre"></div>
+
+      <input
+        type="text"
+        id="apellido"
+        name="last_name"
+        required
+        placeholder="Apellido"
+      />
+      <div class="error" id="errorApellido"></div>
+
+      <input
+        type="email"
+        id="email"
+        name="email"
+        required
+        placeholder="Email"
+      />
+      <div class="error" id="errorEmail"></div>
+
+      <input
+        type="date"
+        id="fechaNacimiento"
+        name="birth_date"
+        required
+        placeholder="Fecha de Nacimiento"
+      />
+      <div class="error" id="errorFechaNacimiento"></div>
+
+      <input
+        type="password"
+        id="contraseña"
+        name="password"
+        required
+        placeholder="****************"
+      />
+      <div class="error" id="errorContraseña"></div>
+
+      <input
+        type="password"
+        id="confirmarContraseña"
+        name="password_confirmation"
+        required
+        placeholder="****************"
+      />
+      <div class="error" id="errorConfirmarContraseña"></div>
+
+      <div>
+        <select name="country_code" class="pais">
+          <option value="">Seleccionar país</option>
+          <option value="AF">Afganistán</option>
+          <option value="AL">Albania</option>
+          <option value="DE">Alemania</option>
+          <option value="AR">Argentina</option>
+          <option value="BO">Bolivia</option>
+          <option value="BR">Brasil</option>
+          <option value="CA">Canadá</option>
+          <option value="CL">Chile</option>
+          <option value="CO">Colombia</option>
+          <option value="CR">Costa Rica</option>
+          <option value="CU">Cuba</option>
+          <option value="EC">Ecuador</option>
+          <option value="SV">El Salvador</option>
+          <option value="ES">España</option>
+          <option value="US">Estados Unidos</option>
+          <option value="FR">Francia</option>
+          <option value="GT">Guatemala</option>
+          <option value="HN">Honduras</option>
+          <option value="MX">México</option>
+          <option value="NI">Nicaragua</option>
+          <option value="PA">Panamá</option>
+          <option value="PY">Paraguay</option>
+          <option value="PE">Perú</option>
+          <option value="PR">Puerto Rico</option>
+          <option value="DO">República Dominicana</option>
+          <option value="UY">Uruguay</option>
+          <option value="VE">Venezuela</option>
+        </select>
+      </div>
+
+      <button type="submit">Continuar</button>
+      <p>
+        Ya tienes una cuenta?
+        <a href="login.html" class="loginlink">Iniciar Sesión</a>
+      </p>
+    </form>
+
+    <script src="script.js"></script>
+  </body>
+</html>

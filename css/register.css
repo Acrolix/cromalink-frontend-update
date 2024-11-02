@@ -1,0 +1,103 @@
+body {
+  font-family: "Roboto";
+  background-color: #f88a4b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-image: url("home_Acrolix.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#registroForm {
+  background-color: #242424;
+  padding: 30px;
+  border-radius: 40px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  width: 300px;
+}
+
+.titulo {
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: "Roboto";
+  font-size: 20px;
+}
+
+label {
+  color: white;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+select {
+  width: 100%;
+  padding: 15px;
+  font-size: 15px;
+  border: 1px solid #424241;
+  border-radius: 20px;
+  background-color: #424241;
+  color: #e1e1e1;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+
+.error {
+  color: red;
+  margin-bottom: 10px;
+  font-size: small;
+}
+
+button[type="submit"] {
+  font-family: "Roboto";
+  font-size: 20px;
+  background-color: #ff9d00;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+  transition: all 0.5s;
+}
+
+button[type="submit"]:hover {
+  background-color: #60c0e2;
+  color: #242424;
+}
+.pie {
+  color: white;
+  text-align: left;
+  margin-bottom: 20px;
+  font-family: "Roboto";
+  font-size: 12px;
+}
+p {
+  color: #ffffff;
+  text-align: left;
+  margin-bottom: 20px;
+  font-family: "Roboto";
+  font-size: 12px;
+}
+
+.loginlink {
+  color: #60c0e2;
+  text-align: left;
+  margin-bottom: 20px;
+  font-family: "Roboto";
+  font-size: 12px;
+}
+/*  Ajustes responsivos  (opcional) */
+@media (max-width: 400px) {
+  #registroForm {
+    width: 90%;
+  }
+}
