@@ -2,6 +2,7 @@ body {
   background-image: url("home_Acrolix.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
 }
 
 h1{
@@ -10,6 +11,9 @@ h1{
     font-style: italic;
     display: flex;
     justify-content: center;
+    color: white;
+    text-shadow: 2px 2px 4px #000000
+  
 }
 .botones {
     display: flex;
@@ -21,6 +25,8 @@ h1{
     font-style: italic;
     display: flex;
     justify-content: center;
+    color: white;
+    text-shadow: 2px 2px 4px #000000
   }
 footer {
  
@@ -33,4 +39,5 @@ footer {
 .acrolix_logo{
     max-width: 100%;
     height: auto;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
 }
