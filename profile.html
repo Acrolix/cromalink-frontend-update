@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cromalink - Profile</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/barralateral.css">
     <link rel="stylesheet" href="/css/profile.css">
+    <link rel="stylesheet" href="/css/galeria.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -36,14 +37,21 @@
                 <div class="perfil-header">
                     <img src="/img/profile.jpg" alt="Foto de perfil" class="foto_perfil_grande">
                     <div class="perfil-info">
-                        <h2>Martín Lorenzo</h2>
-                        <input type="file">
+                        <h2 class="profilename">Martín Lorenzo</h2>
+                       
                         <p class="bio">Me llamo Martín Lorenzo, soy desarrollador web, me encanta compartir mis costumbres y visitar lugares en el mundo.</p>
+                        
                         <div class="estadisticas">
                             <span><strong>120</strong> Publicaciones</span>
                             <span><strong>450</strong> Seguidores</span>
                             <span><strong>300</strong> Seguidos</span>
+                           
                         </div>
+                        <label for="upload-photo" class="custom-file-upload">
+                            <i class="fas fa-upload"></i> 
+                          </label>
+                          <input type="file" id="upload-photo" style="display: none;">
+                        
                     </div>
                 </div>
                 <hr>
