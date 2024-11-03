@@ -5,11 +5,11 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body>
+<body class="traducible">
     <div class="contenedor">
         <div class="barra_lateral">
             <div class="logo">
-                <img src="/img/logo.svg" alt="logo">
+                <img src="img/logo.svg" alt="logo">
             </div>
                 <a href="login.html"><i class="fa-solid fa-user"></i></i>Perfil</a>
                 <a href="post.html"><i class="fas fa-plus"></i> Add Post</a>
@@ -28,12 +28,13 @@
                 <i class="fas fa-search"></i>
                 <input type="text" placeholder="Buscar">
             </div>
-            <h4>Cuenta</h4>
+            <h4>Cuenta <a href="cromalink.html" class="fas fa-arrow-left flecha"></a></h4> 
             <h4 class="sub-contenido">CORREO ELECTRONICO</h4>
             <h4 class="sub-contenido">CAMBIAR NOMBRE DE USUARIO</h4>
             <br>
             <h4>Idiomas</h4>
             <h4 class="sub-contenido">IDIOMA DE LA APLICACION</h4>
+            <boton id="traducir-btn">idioma</boton>
             <br>
             <h4>Pantalla</h4>
             <h4 class="boton-sub-contenido" onclick="cambiar_color()">MODO CLARO</h4>
@@ -47,14 +48,14 @@
             <br>
             <h4>Social</h4>
             <h4 class="sub-contenido">CONTENIDO GUARDADO</h4>
-            <h4 class="sub-contenido">USUARIOS BLOQUEADOS</h4>
+            <h4 class="sub-contenido"><a href="bloqueados.html" class="sub-contenido">USUARIOS BLOQUEADOS</a></h4>
             <br>
             <h4>Informacion</h4>
             <h4 class="sub-contenido">VERSION</h4>
             <br>
             <br>
-            <h4><a href="politica.html">POLITICA DE PRIVACIDAD</a></h4>
-            <h4> <a href="termino.html">TERMINOS Y CONDICIONES</a></h4>
+            <h4><a href="politica.html" class="sub-contenido">POLITICA DE PRIVACIDAD</a></h4>
+            <h4> <a href="termino.html" class="sub-contenido">TERMINOS Y CONDICIONES</a></h4>
         </div>
     </div>
 </body>
