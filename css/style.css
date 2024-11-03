@@ -1,202 +1,86 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0%;
-    padding: 0%;
-    box-sizing: border-box;
-}
-
-.contenedor {
-    display: flex;
-    flex-direction: row;
-    height: 100vh;
+  font-family: "Roboto";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  background-color: black;
 }
 
 .barra_lateral {
-    background-color: #2C3E35;
-    width: 250px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  background-color: #242424;
+  width: 250px;
+  padding: 20px;
+  position: fixed; /* Barra lateral fija */
+  top: 0;
+  left: 0;
+  bottom: 0;
+  overflow-y: auto; /* Scroll vertical si es necesario */
+  /* La barra lateral siempre será visible */
+  z-index: 10; /* Asegura que la barra lateral esté encima del contenido */
 }
 
 .barra_lateral a {
-    color: #ecf0f1;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 10px 0;
-    display: block;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 0;
+  display: block;
 }
 
 .barra_lateral a i {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .barra_lateral img {
-    width: 100%;
-    margin-bottom: 20px;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 .barra_lateral .line {
-    border-top: 1px dashed #7f8c8d;
-    margin: 20px 0;
+  border-top: 1px dashed #7f8c8d;
+  margin: 20px 0;
 }
 
-.barra_lateral .foto_perfil img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-top: 20px;
+.contenido {
+  flex: 1;
+  margin-left: 250px; /* Espacio para la barra lateral */
+  padding: 20px;
+  background-color: rgb(0, 0, 0); /* O el color que necesites */
+  color: #ffffff;
+  overflow-y: auto;
 }
 
-.barra_busqueda {
-    background-color: #404747;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    border-radius: 5px;
+.contenido {
+  overflow: hidden; /* Evita el scroll horizontal */
+}
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  ); /* Ajusta el tamaño mínimo de las columnas */
+  grid-auto-rows: 1fr; /* Las filas se ajustan al contenido */
+  gap: 10px;
+  max-height: 900px; /* Altura máxima de 3 filas */
+  overflow-y: auto; /* Scroll vertical si hay más de 3 filas */
 }
 
-.barra_busqueda i {
-    margin-right: 10px;
-    transition: transform 0.3s;
+.galeria .post {
+  border: 2px solid #242424;
+  transition: border-color 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
+  aspect-ratio: 1 / 1; /* Mantiene la proporción de aspecto cuadrada */
 }
 
-.barra_busqueda:hover i {
-    transform: rotate(360deg);
+.galeria .post:hover {
+  border-color: #e9a21f;
 }
 
-
-.barra_busqueda input {
-    border: none;
-    background: none;
-    outline: none;
-    width: 100%;
-}
-
-
-@media (max-width: 768px) {
-    .contenedor {
-        flex-direction: column;
-    }
-
-    .barra_lateral {
-        width: 100%;
-        height: auto;
-        padding: 10px;
-    }
-
-    .barra_lateral a {
-        font-size: 16px;
-        padding: 5px 0;
-    }
-
-    .barra_busqueda {
-        padding: 8px;
-    }
-}
-
-@media (max-width: 480px) {
-    .barra_lateral {
-        text-align: center;
-    }
-
-    .barra_lateral a {
-        font-size: 14px;
-        padding: 3px 0;
-    }
-
-    .barra_lateral .foto_perfil img {
-        width: 40px;
-        height: 40px;
-    }
-
-    .barra_busqueda i {
-        font-size: 14px;
-    }
-
-    .barra_busqueda input {
-        font-size: 14px;
-    }
-}
-
-h4{
-    padding: 0 10%;
-}
-
-a{
-    color: #ffffffea;
-}
-
-.contenido{
-    margin-left: 0;
-    flex: 1;
-    width: 100%;
-    position: relative;
-    height: 100%;
-    background-color: rgb(0, 0, 0);
-    color: #ffffff;
-    overflow-y: auto;
-}
-
-.sub-contenido{
-    color: #ffffffea;
-}
-
-.boton-sub-contenido{
-    color: #ffffffea;
-    cursor: pointer;
-}
-
-.linea_punteada{
-    border: none;
-    border-top: 2px solid black;
-    width: 100%;
-    height: 1%;
-    margin: 40px 0 20px 0;
-}
-
-.debajo_punteada{
-    position: relative;
-    width: 80%;
-    text-align: left;
-}
-
-.toogle-container{
-    display: flex;
-    align-items: center;
-}
-
-.toogle{
-    display: none;
-}
-
-.toogle-label{
-    width: 60px;
-    height: 30px;
-    background-color: #ccc;
-    border-radius: 15px;
-    position: relative;
-    cursor: pointer;
-    transition: background-color 0.3s
-}
-
-.toogle-label:before {
-    content: '';
-    position: absolute;
-    width: 26px;
-    height: 26px;
-    background-color: white;
-    border-radius: 50%;
-    top: 2px;
-    left: 2px;
-    transition: transform 0.3s;
-}
-
-.toogle:checked + .toogle-label {
-    background-color: #4caf50;
-}
-
-.toogle:checked + .toogle-label:before {
-    transform: translateX(30px);
+.galeria .post img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
