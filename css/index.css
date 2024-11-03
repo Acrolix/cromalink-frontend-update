@@ -10,6 +10,7 @@ h1{
     font-style: italic;
     display: flex;
     justify-content: center;
+    color: white;
 }
 .botones {
     display: flex;
