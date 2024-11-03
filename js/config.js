@@ -4,9 +4,11 @@ function cambiar_color(){
     const contenido = document.querySelector('.contenido');
     const sub_contenido = document.getElementsByClassName('sub-contenido');
     const boton = document.querySelector('.boton-sub-contenido');
+    const flecha = document.querySelector('.flecha')
     if(color === false){
     contenido.style.backgroundColor = 'white';
     contenido.style.color = 'black';
+    flecha.style.color = '#1B1F3E'
 
     for(let i = 0; i < sub_contenido.length; i++){
     sub_contenido[i].style.color = '#1B1F3E';
@@ -18,6 +20,7 @@ function cambiar_color(){
     else{
     contenido.style.backgroundColor = 'black';
     contenido.style.color = '#ffffff';
+    flecha.style.color = 'white'
 
     for(let i = 0; i < sub_contenido.length; i++){
     sub_contenido[i].style.color = '#ffffffea';
