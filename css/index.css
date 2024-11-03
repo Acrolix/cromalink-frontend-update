@@ -6,15 +6,6 @@ body {
   filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
 }
 
-<<<<<<< HEAD
-h1{
-    
-    font-size: 50px;
-    font-style: italic;
-    display: flex;
-    justify-content: center;
-    color: white;
-=======
 h1 {
   font-size: 50px;
   font-style: italic;
@@ -22,7 +13,6 @@ h1 {
   justify-content: center;
   color: white;
   text-shadow: 2px 2px 4px #000000;
->>>>>>> index
 }
 .botones {
   display: flex;
