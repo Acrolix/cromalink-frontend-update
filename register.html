@@ -12,6 +12,17 @@
       <h1 class="titulo">Registro</h1>
 
       <input
+        class="casilla"
+        type="text"
+        id="usuario"
+        name="username"
+        required
+        placeholder="Usuario"
+      />
+      <div class="error" id="errorUsuario"></div>
+
+      <input
+        class="casilla"
         type="text"
         id="nombre"
         name="first_name"
@@ -21,6 +32,7 @@
       <div class="error" id="errorNombre"></div>
 
       <input
+        class="casilla"
         type="text"
         id="apellido"
         name="last_name"
@@ -30,6 +42,7 @@
       <div class="error" id="errorApellido"></div>
 
       <input
+        class="casilla"
         type="email"
         id="email"
         name="email"
@@ -39,6 +52,7 @@
       <div class="error" id="errorEmail"></div>
 
       <input
+        class="casilla"
         type="date"
         id="fechaNacimiento"
         name="birth_date"
@@ -48,6 +62,7 @@
       <div class="error" id="errorFechaNacimiento"></div>
 
       <input
+        class="casilla"
         type="password"
         id="contraseña"
         name="password"
@@ -57,6 +72,7 @@
       <div class="error" id="errorContraseña"></div>
 
       <input
+        class="casilla"
         type="password"
         id="confirmarContraseña"
         name="password_confirmation"
@@ -66,7 +82,7 @@
       <div class="error" id="errorConfirmarContraseña"></div>
 
       <div>
-        <select name="country_code" class="pais">
+        <select name="country_code" class="casilla">
           <option value="">Seleccionar país</option>
           <option value="AF">Afganistán</option>
           <option value="AL">Albania</option>
