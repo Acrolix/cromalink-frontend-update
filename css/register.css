@@ -5,7 +5,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-image: url("home_Acrolix.jpeg");
+  background-image: url("/img/home_Acrolix.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
 }
