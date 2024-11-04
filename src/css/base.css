@@ -1,0 +1,16 @@
+:root {
+    --primary-color: #ffae50;
+    --secondary-color: #4ec1df;
+    --tertiary-color: #242424;
+}
+body {
+    font-family: Roboto, sans-serif;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--tertiary-color);
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}

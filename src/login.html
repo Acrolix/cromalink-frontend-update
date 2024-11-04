@@ -3,32 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login-CromaLink</title>
+    <title>Home</title>
+    <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/login.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
   </head>
   <body>
-    <div class="contenedor_login">
+    <div class="container">
+      <div class="cromalink_slogan">
+        <h1>Bienvenidos</h1>
+        <img src="img/logo.svg" alt="CromaLink Logo" />
+        <p class="slogan">A traves del camino del mundo arte</p>
+      </div>
       <div class="login_formulario">
         <div class="logo_login">
           <img src="img/logo.svg" alt="CromaLink Logo" />
         </div>
         <h2>Iniciar Sesión</h2>
-        <form action="cromalink.html" method="POST">
+        <form>
           <div class="input_text">
-            <input type="text" name="username" placeholder="Ejemplo@ejemplo.com" required />
+            <input
+              type="text"
+              name="username"
+              id="username"
+              placeholder="ejemplo@dominio.com"
+              required
+            />
           </div>
           <div class="input_text">
             <input
               type="password"
               name="password"
+              id="password"
               placeholder="****************"
               required
             />
           </div>
+          <div class="remember_me">
+            <label for="remember_me">Recordarme</label>
+            <input type="checkbox" name="remember_me" id="remember_me" />
+          </div>
+          <div class="error"></div>
           <div class="boton_login">
             <button type="submit">Entrar</button>
           </div>
@@ -38,5 +52,11 @@
         </form>
       </div>
     </div>
+    <footer>
+      <div class="acrolix_footer">
+        <img src="img/acrolix.svg" alt="Acrolix Logo" />
+      </div>
+    </footer>
+    <script type="module" src="js/login.js"></script>
   </body>
 </html>
