@@ -65,6 +65,7 @@ body {
 .perfil-info h2 {
   font-size: 40px;
   margin: 0;
+  text-shadow: 2px 2px 5px black;
 }
 
 
@@ -92,4 +93,5 @@ body {
   color:#e9a21f
   
 }
+
 
