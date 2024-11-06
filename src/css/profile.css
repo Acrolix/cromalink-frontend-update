@@ -28,6 +28,14 @@ body {
   font-size: 1.2em;
 }
 
+.barra_busqueda input[type="text"]:hover {
+    color: #e9a21f;
+}
+
+.barra_busqueda i:hover {
+  color: #e9a21f;
+}
+
 .barra_busqueda input[type="text"] {
   border: none;
   background-color: transparent;
