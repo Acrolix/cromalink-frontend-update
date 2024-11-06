@@ -10,6 +10,31 @@ export const authLogin = (username, password) => {
   });
 };
 
+export const authRegister = ({
+  username,
+  first_name,
+  last_name,
+  email,
+  birthdate,
+  country_code,
+  password,
+  password_confirmation,
+}) => {
+  return apiRequest("/auth/register", {
+    method: "POST",
+    body: {
+      username,
+      first_name,
+      last_name,
+      email,
+      birthdate,
+      country_code,
+      password,
+      password_confirmation,
+    },
+  });
+};
+
 export const authLogout = () => {
   localStorage.clear();
   sessionStorage.clear();

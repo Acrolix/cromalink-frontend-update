@@ -12,7 +12,6 @@ h1 {
   text-shadow: 2px 2px 4px #000000;
 }
 
-
 h2 {
   color: #ffffff;
   font-size: 1.5em;
@@ -43,10 +42,9 @@ footer {
   width: 300px;
   text-align: center;
   margin: 0 2em;
-  
 }
-.logo_login{
-    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+.logo_login {
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
 }
 
 .cromalink_slogan {
@@ -96,7 +94,7 @@ footer {
   margin-bottom: 10px;
 }
 
-.input_text input{
+.input_text input {
   width: 100%;
   box-sizing: border-box;
   padding: 15px;
@@ -111,7 +109,7 @@ footer {
 }
 
 .input_text input:focus {
-    border-color: var(--primary-color);
+  border-color: var(--primary-color);
 }
 
 .boton_login {
@@ -151,7 +149,7 @@ footer {
   text-decoration: underline;
 }
 
-.dev{
+.dev {
   color: white;
   text-shadow: 2px 2px 4px #000000;
 }
@@ -166,15 +164,14 @@ footer {
 }
 
 .acrolix_footer img {
-height: 60%;
-margin-left: 10px;
+  height: 60%;
+  margin-left: 10px;
 }
 
 .acrolix_footer span {
   color: white;
   text-shadow: 2px 2px 4px #000000;
 }
-
 
 @media (max-width: 940px) {
   /* .contenedor_login {
