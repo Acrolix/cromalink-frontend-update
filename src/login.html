@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/login.css" />
   </head>
   <body>
+    <script type="module" src="/js/middleware/auth.js"></script>
     <div class="container">
       <div class="cromalink_slogan">
         <h1>Bienvenidos</h1>
@@ -42,7 +43,7 @@
             <label for="remember_me">Recordarme</label>
             <input type="checkbox" name="remember_me" id="remember_me" />
           </div>
-          <div class="error"></div>
+          <div class="error" id="errorLabel"></div>
           <div class="boton_login">
             <button type="submit">Entrar</button>
           </div>
