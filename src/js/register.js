@@ -1,4 +1,5 @@
 import { authRegister } from "./services/authService.js";
+import getCountries from "./services/getCountries.js";
 const loginForm = document.querySelector(".register_formulario");
 
 loginForm.addEventListener("submit", (e) => {
@@ -6,47 +7,64 @@ loginForm.addEventListener("submit", (e) => {
   register();
 });
 
-function register() {
-  const username = document.getElementById("username").value;
-  const first_name = document.getElementById("first_name").value;
-  const last_name = document.getElementById("last_name").value;
-  const email = document.getElementById("email").value;
-  const birthdate = document.getElementById("birth_date").value;
-  const country_code = document.getElementById("country_code").value;
-  const password = document.getElementById("password").value;
-  const password_confirmation = document.getElementById(
-    "password_confirmation"
-  ).value;
+getCountries().then((countries) => {
+  const countrySelect = document.getElementById("country_code");
+  countries.forEach((country) => {
+    const option = document.createElement("option");
+    option.value = country.code;
+    option.textContent = country.name;
+    countrySelect.appendChild(option);
+  });
+});
 
-  authRegister({
-    username,
-    first_name,
-    last_name,
-    email,
-    birthdate,
-    country_code,
-    password,
-    password_confirmation,
-  })
+// document.querySelectorAll(".casilla").forEach((casilla) => {
+//   casilla.addEventListener("focusin", (e) => {
+//     e.preventDefault();
+//     console.log("hola");
+//     casilla.classList.remove("error");
+//   });
+// });
+
+function register() {
+  const data = {
+    username: document.getElementById("username").value,
+    first_name: document.getElementById("first_name").value,
+    last_name: document.getElementById("last_name").value,
+    email: document.getElementById("email").value,
+    birth_date: document.getElementById("birth_date").value,
+    country_code: document.getElementById("country_code").value,
+    password: document.getElementById("password").value,
+    password_confirmation: document.getElementById("password_confirmation")
+      .value,
+  };
+
+  console.log("data: ", data);
+
+  authRegister(data, { method: "POST" })
     .then((response) => {
-      let storage;
-      remember_me ? (storage = localStorage) : (storage = sessionStorage);
-      storage.setItem("token", response.access_token);
-      storage.setItem("refresh_token", response.refresh_token);
       console.log("response: ", response);
     })
     .catch((error) => {
+      console.log("error: ", error);
       if (error?.errors) {
         for (const [field, errors] of Object.entries(error.errors)) {
-          // Marcar el campo con error
           const fieldElement = document.getElementById(field);
-          if (fieldElement) {
-            fieldElement.classList.add("error");
 
-            // Encontrar el div de error asociado al campo
-            const errorDiv = fieldElement.parentElement.querySelector(".error");
+          if (fieldElement) {
+            fieldElement.removeEventListener("focus", () => {});
+            const errorDiv =
+              fieldElement.parentElement.querySelector(".errorField");
             if (errorDiv && errors.length > 0) {
-              errorDiv.textContent = errors[0]; // Usar el primer (y único) mensaje de error
+              errorDiv.style.display = "block";
+              errorDiv.textContent = errors[0];
+            }
+            if (!fieldElement.classList.contains("error")) {
+              fieldElement.classList.add("error");
+              fieldElement.addEventListener("focus", () => {
+                console.log("hola");
+                fieldElement.classList.remove("error");
+                errorDiv.style.display = "none";
+              });
             }
           }
         }

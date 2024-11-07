@@ -1,14 +1,14 @@
 body {
   background-image: url("/img/home_Acrolix.jpeg");
-  background-size: cover;
   background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   flex-direction: column;
 }
 
 h1 {
-  font-size: 2em;
   color: white;
+  font-size: 2em;
   text-shadow: 2px 2px 4px #000000;
 }
 
@@ -18,20 +18,70 @@ h2 {
 }
 
 footer {
-  display: flex;
-  justify-content: center;
   align-items: center;
+  display: flex;
   height: 100px;
+  justify-content: center;
+}
+
+label {
+  color: white;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input,
+.casilla {
+  background-color: #424241;
+  border: 2px solid #424241;
+  border-radius: 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  color: #ffffff;
+  font-size: 15px;
+  margin-bottom: 0.8em;
+  padding: 15px;
+  transition: border-color 0.5s ease;
+  width: 100%;
+}
+
+input:focus,
+select:focus {
+  border-color: #e9a21f;
+  outline: none;
+}
+
+button[type="submit"] {
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 20px;
+  color: #242424;
+  cursor: pointer;
+  font-family: "Roboto";
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-top: 20px;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+button[type="submit"]:hover {
+  background-color: var(--secondary-color);
+}
+
+button[type="submit"]:focus {
+  outline: 2px solid #e9a21f;
 }
 
 .container {
+  align-items: center;
   display: grid;
-  width: 100%;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr;
-  align-items: center;
-  justify-content: center;
   height: calc(100vh - 100px);
+  justify-content: center;
+  width: 100%;
 }
 
 .logo_registro img {
@@ -41,128 +91,60 @@ footer {
 
 .register_formulario {
   background-color: var(--tertiary-color);
-  padding: 2em;
   border-radius: 40px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  width: 500px;
-  text-align: center;
   margin: 0 2em;
+  padding: 2em;
+  text-align: center;
+  width: 500px;
 }
+
 .cromalink_slogan {
-  font-size: 2em;
+  align-items: center;
   color: white;
-  text-shadow: 2px 2px 8px #000000;
   display: flex;
   flex-direction: column;
+  font-size: 2em;
   justify-content: center;
-  align-items: center;
+  text-shadow: 2px 2px 8px #000000;
 }
 
 .cromalink_slogan img {
-  width: 70%;
   filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
   margin: 0 auto;
+  width: 70%;
 }
 
 .error {
-  color: red;
-  margin-bottom: 10px;
-  font-size: small;
-  font-weight: bold;
-  text-align: center;
-  display: none;
   border: 1px solid red;
-  min-height: 1.5em;
-  border-radius: 5px;
-  background-color: rgba(255, 0, 0, 0.2);
-}
-label {
-  color: white;
-  display: block;
-  margin-bottom: 5px;
-}
-
-input,
-.casilla {
-  width: 100%;
-  padding: 15px;
-  font-size: 15px;
-  border: 2px solid #424241;
-  border-radius: 40px;
-  background-color: #424241;
-  color: #ffffff;
-  box-sizing: border-box;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  transition: border-color 0.5s ease;
-  margin-bottom: 0.8em;
-}
-
-input:focus,
-select:focus {
-  border-color: #e9a21f;
-  outline: #e9a21f;
-}
-
-.error {
   color: red;
-  margin-bottom: 10px;
+}
+
+.errorField {
+  background-color: rgba(255, 0, 0, 0.2);
+  border: 1px solid red;
+  border-radius: 5px;
+  color: #ffbbbb;
+  display: none;
   font-size: small;
-}
-
-button[type="submit"] {
-  font-family: "Roboto";
-  font-size: 20px;
-  background-color: #ff9d00;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  width: 100%;
-  margin-top: 20px;
-  transition: all 0.5s;
-}
-
-button[type="submit"]:hover {
-  background-color: #60c0e2;
-  color: #242424;
-}
-
-p {
-  color: #ffffff;
-  text-align: left;
-  margin-bottom: 20px;
-  font-family: "Roboto";
-  font-size: 12px;
-}
-
-.loginlink {
-  color: #60c0e2;
-  text-align: left;
-  margin-bottom: 20px;
-  font-family: "Roboto";
-  font-size: 12px;
-  text-decoration: none;
   font-weight: bold;
+  margin-bottom: 10px;
+  min-height: 1.5em;
+  text-align: center;
+  padding: 0.2em;
+}
+
+.login_link {
+  color: #ffffff;
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+.login_link a {
+  color: var(--primary-color);
 }
 
 a:hover {
-  text-decoration: underline;
-}
-
-.registrar_link {
-  margin-top: 20px;
-  font-size: 12px;
-  color: #ffffff;
-}
-
-.registrar_link a {
-  color: var(--primary-color);
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.registrar_link a:hover {
   text-decoration: underline;
 }
 
@@ -172,12 +154,12 @@ a:hover {
 }
 
 .acrolix_footer {
-  display: flex;
   align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
+  display: flex;
   filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+  height: 100%;
+  justify-content: center;
+  width: 100%;
 }
 
 .acrolix_footer img {
@@ -199,6 +181,7 @@ a:hover {
   margin-right: 1em;
   width: 100%;
 }
+
 .field:last-child {
   margin-right: 0;
 }
@@ -208,12 +191,10 @@ a:hover {
 }
 
 @media (max-width: 940px) {
-  /* .contenedor_login {
-      padding: 10px;
-    } */
   .container {
     grid-template-columns: 1fr;
   }
+
   .cromalink_slogan {
     display: none;
   }

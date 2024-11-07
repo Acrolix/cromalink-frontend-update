@@ -29,8 +29,10 @@
               name="username"
               required
               placeholder="Usuario"
+              autocomplete="username"
+              value="pruebauser"
             />
-            <div class="error" id="errorUsuario"></div>
+            <div class="errorField" id="errorUsuario"></div>
           </div>
           <div class="fieldGroup">
             <div class="field">
@@ -41,8 +43,10 @@
                 name="first_name"
                 required
                 placeholder="Nombre"
+                autocomplete="given-name"
+                value="pruebaNombre"
               />
-              <div class="error" id="errorNombre"></div>
+              <div class="errorField" id="errorNombre"></div>
             </div>
             <div class="field">
               <input
@@ -52,8 +56,10 @@
                 name="last_name"
                 required
                 placeholder="Apellido"
+                autocomplete="family-name"
+                value="pruebaApellido"
               />
-              <div class="error" id="errorApellido"></div>
+              <div class="errorField" id="errorApellido"></div>
             </div>
           </div>
           <div class="field">
@@ -64,8 +70,10 @@
               name="email"
               required
               placeholder="Email"
+              autocomplete="email"
+              value="prueba@test.com"
             />
-            <div class="error" id="errorEmail"></div>
+            <div class="errorField" id="errorEmail"></div>
           </div>
           <div class="fieldGroup">
             <div class="field">
@@ -76,14 +84,16 @@
                 name="birth_date"
                 required
                 placeholder="Fecha de Nacimiento"
+                autocomplete="bday"
+                value="1990-01-01"
               />
-              <div class="error" id="errorFechaNacimiento"></div>
+              <div class="errorField" id="errorFechaNacimiento"></div>
             </div>
             <div class="field">
               <select name="country_code" id="country_code" class="casilla">
                 <option value="">Seleccionar país</option>
-                <option value="AF">Afganistán</option>
               </select>
+              <div class="errorField" id="errorcountryCode"></div>
             </div>
           </div>
           <div class="fieldGroup">
@@ -95,8 +105,10 @@
                 name="password"
                 required
                 placeholder="Contraseña"
+                autocomplete="new-password"
+                value="Prueba.321"
               />
-              <div class="error" id="errorContraseña"></div>
+              <div class="errorField" id="errorContraseña"></div>
             </div>
             <div class="field">
               <input
@@ -106,15 +118,17 @@
                 name="password_confirmation"
                 required
                 placeholder="Confirmación de contraseña"
+                autocomplete="new-password"
+                value="prueba123"
               />
-              <div class="error" id="errorConfirmarContraseña"></div>
+              <div class="errorField" id="errorConfirmarContraseña"></div>
             </div>
           </div>
 
           <button type="submit">Continuar</button>
-          <p>
+          <p class="login_link">
             Ya tienes una cuenta?
-            <a href="login" class="loginlink">Iniciar Sesión</a>
+            <a href="login">Iniciar Sesión</a>
           </p>
         </form>
       </div>

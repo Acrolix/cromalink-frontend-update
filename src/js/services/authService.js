@@ -1,4 +1,4 @@
-import { apiAuthRequest, apiRequest } from "../helpers/apiRequests";
+import { apiAuthRequest, apiRequest } from "../helpers/apiRequests.js";
 
 export const authLogin = (username, password) => {
   return apiRequest("/auth/login", {
