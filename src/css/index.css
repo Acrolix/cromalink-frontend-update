@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
   display: flex;
   flex-direction: column;
@@ -54,3 +55,5 @@ footer {
   height: auto;
   filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
 }
+=======
+>>>>>>> login-api-ma

@@ -1,31 +1,94 @@
 body {
-  font-family: "Roboto";
-  display: flex;
-  margin: 0;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
   background-image: url("/img/home_Acrolix.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 2em;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+
+h2 {
+  color: #ffffff;
+  font-size: 1.5em;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 100px);
 }
 
 .login_formulario {
-  background-color: #242424;
-  padding: 50px;
+  background-color: var(--tertiary-color);
+  padding: 2em;
   border-radius: 40px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   width: 300px;
   text-align: center;
+  margin: 0 2em;
   
 }
 .logo_login{
     filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
 }
 
-h2 {
-  color: #ffffff;
-  font-size: 20px;
+.cromalink_slogan {
+  font-size: 2em;
+  color: white;
+  text-shadow: 2px 2px 8px #000000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cromalink_slogan img {
+  width: 70%;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+  margin: 0 auto;
+}
+
+.error {
+  color: red;
+  margin-bottom: 10px;
+  font-size: small;
+  font-weight: bold;
+  text-align: center;
+  display: none;
+  border: 1px solid red;
+  min-height: 1.5em;
+  border-radius: 5px;
+  background-color: rgba(255, 0, 0, 0.2);
+}
+
+.remember_me {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+  margin-right: 1em;
+  color: white;
+  justify-content: right;
+}
+
+.remember_me input {
+  margin-left: 10px;
 }
 
 .input_text {
@@ -48,7 +111,7 @@ h2 {
 }
 
 .input_text input:focus {
-    border-color: #e9a21f;
+    border-color: var(--primary-color);
 }
 
 .boton_login {
@@ -57,10 +120,11 @@ h2 {
 
 .boton_login button {
   width: 100%;
-  background-color: #e9a21f;
-  color: white;
+  background-color: var(--primary-color);
+  color: #242424;
   padding: 12px;
   font-size: 16px;
+  font-weight: bold;
   border: none;
   border-radius: 30px;
   cursor: pointer;
@@ -68,8 +132,7 @@ h2 {
 }
 
 .boton_login button:hover {
-  background-color: #60c0e2;
-  color: #242424;
+  background-color: var(--secondary-color);
 }
 
 .registrar_link {
@@ -79,7 +142,7 @@ h2 {
 }
 
 .registrar_link a {
-  color: #60c0e2;
+  color: var(--primary-color);
   text-decoration: none;
   font-weight: bold;
 }
@@ -88,12 +151,49 @@ h2 {
   text-decoration: underline;
 }
 
-@media (max-width: 768px) {
-  .contenedor_login {
+.dev{
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.acrolix_footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+}
+
+.acrolix_footer img {
+height: 60%;
+margin-left: 10px;
+}
+
+.acrolix_footer span {
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+
+@media (max-width: 940px) {
+  /* .contenedor_login {
     padding: 10px;
+  } */
+  .container {
+    grid-template-columns: 1fr;
+  }
+  .cromalink_slogan {
+    display: none;
   }
 
   .login_formulario {
-    padding: 30px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 520px) {
+  .login_formulario {
+    width: 80%;
   }
 }
