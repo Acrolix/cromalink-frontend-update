@@ -3,124 +3,127 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Registro</title>
+    <title>Home</title>
+    <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/register.css" />
   </head>
   <body>
-    <form id="registroForm">
-      <img src="img/logo.svg" alt="CromaLink Logo" />
-      <h1 class="titulo">Registro</h1>
-
-      <input
-        class="casilla"
-        type="text"
-        id="usuario"
-        name="username"
-        required
-        placeholder="Usuario"
-      />
-      <div class="error" id="errorUsuario"></div>
-
-      <input
-        class="casilla"
-        type="text"
-        id="nombre"
-        name="first_name"
-        required
-        placeholder="Nombre"
-      />
-      <div class="error" id="errorNombre"></div>
-
-      <input
-        class="casilla"
-        type="text"
-        id="apellido"
-        name="last_name"
-        required
-        placeholder="Apellido"
-      />
-      <div class="error" id="errorApellido"></div>
-
-      <input
-        class="casilla"
-        type="email"
-        id="email"
-        name="email"
-        required
-        placeholder="Email"
-      />
-      <div class="error" id="errorEmail"></div>
-
-      <input
-        class="casilla"
-        type="date"
-        id="fechaNacimiento"
-        name="birth_date"
-        required
-        placeholder="Fecha de Nacimiento"
-      />
-      <div class="error" id="errorFechaNacimiento"></div>
-
-      <input
-        class="casilla"
-        type="password"
-        id="contraseña"
-        name="password"
-        required
-        placeholder="****************"
-      />
-      <div class="error" id="errorContraseña"></div>
-
-      <input
-        class="casilla"
-        type="password"
-        id="confirmarContraseña"
-        name="password_confirmation"
-        required
-        placeholder="****************"
-      />
-      <div class="error" id="errorConfirmarContraseña"></div>
-
-      <div>
-        <select name="country_code" class="casilla">
-          <option value="">Seleccionar país</option>
-          <option value="AF">Afganistán</option>
-          <option value="AL">Albania</option>
-          <option value="DE">Alemania</option>
-          <option value="AR">Argentina</option>
-          <option value="BO">Bolivia</option>
-          <option value="BR">Brasil</option>
-          <option value="CA">Canadá</option>
-          <option value="CL">Chile</option>
-          <option value="CO">Colombia</option>
-          <option value="CR">Costa Rica</option>
-          <option value="CU">Cuba</option>
-          <option value="EC">Ecuador</option>
-          <option value="SV">El Salvador</option>
-          <option value="ES">España</option>
-          <option value="US">Estados Unidos</option>
-          <option value="FR">Francia</option>
-          <option value="GT">Guatemala</option>
-          <option value="HN">Honduras</option>
-          <option value="MX">México</option>
-          <option value="NI">Nicaragua</option>
-          <option value="PA">Panamá</option>
-          <option value="PY">Paraguay</option>
-          <option value="PE">Perú</option>
-          <option value="PR">Puerto Rico</option>
-          <option value="DO">República Dominicana</option>
-          <option value="UY">Uruguay</option>
-          <option value="VE">Venezuela</option>
-        </select>
+    <!-- <script type="module" src="/js/middleware/auth.js"></script> -->
+    <div class="container">
+      <div class="cromalink_slogan">
+        <h1>Bienvenidos</h1>
+        <img src="img/logo.svg" alt="CromaLink Logo" />
+        <p class="slogan">A traves del camino del mundo arte</p>
       </div>
+      <div class="register_formulario">
+        <div class="logo_registro">
+          <img src="img/logo.svg" alt="CromaLink Logo" />
+        </div>
+        <h2>Registro</h2>
+        <form>
+          <div class="field">
+            <input
+              class="casilla"
+              type="text"
+              id="username"
+              name="username"
+              required
+              placeholder="Usuario"
+            />
+            <div class="error" id="errorUsuario"></div>
+          </div>
+          <div class="fieldGroup">
+            <div class="field">
+              <input
+                class="casilla"
+                type="text"
+                id="first_name"
+                name="first_name"
+                required
+                placeholder="Nombre"
+              />
+              <div class="error" id="errorNombre"></div>
+            </div>
+            <div class="field">
+              <input
+                class="casilla"
+                type="text"
+                id="last_name"
+                name="last_name"
+                required
+                placeholder="Apellido"
+              />
+              <div class="error" id="errorApellido"></div>
+            </div>
+          </div>
+          <div class="field">
+            <input
+              class="casilla"
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="Email"
+            />
+            <div class="error" id="errorEmail"></div>
+          </div>
+          <div class="fieldGroup">
+            <div class="field">
+              <input
+                class="casilla"
+                type="date"
+                id="birth_date"
+                name="birth_date"
+                required
+                placeholder="Fecha de Nacimiento"
+              />
+              <div class="error" id="errorFechaNacimiento"></div>
+            </div>
+            <div class="field">
+              <select name="country_code" id="country_code" class="casilla">
+                <option value="">Seleccionar país</option>
+                <option value="AF">Afganistán</option>
+              </select>
+            </div>
+          </div>
+          <div class="fieldGroup">
+            <div class="field">
+              <input
+                class="casilla"
+                type="password"
+                id="password"
+                name="password"
+                required
+                placeholder="Contraseña"
+              />
+              <div class="error" id="errorContraseña"></div>
+            </div>
+            <div class="field">
+              <input
+                class="casilla"
+                type="password"
+                id="password_confirmation"
+                name="password_confirmation"
+                required
+                placeholder="Confirmación de contraseña"
+              />
+              <div class="error" id="errorConfirmarContraseña"></div>
+            </div>
+          </div>
 
-      <button type="submit">Continuar</button>
-      <p>
-        Ya tienes una cuenta?
-        <a href="login.html" class="loginlink">Iniciar Sesión</a>
-      </p>
-    </form>
-
-    <script src="script.js"></script>
+          <button type="submit">Continuar</button>
+          <p>
+            Ya tienes una cuenta?
+            <a href="login" class="loginlink">Iniciar Sesión</a>
+          </p>
+        </form>
+      </div>
+    </div>
+    <footer>
+      <div class="acrolix_footer">
+        <img src="img/acrolix.svg" alt="Acrolix Logo" />
+      </div>
+    </footer>
+    <script type="module" src="js/register.js"></script>
   </body>
 </html>
