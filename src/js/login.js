@@ -1,3 +1,4 @@
+import { navigateTo } from "./helpers/generics.js";
 import { authLogin, authLogout, authVerify } from "./services/authService.js";
 const loginForm = document.querySelector(".login_formulario");
 
@@ -34,11 +35,11 @@ function login() {
       remember_me ? (storage = localStorage) : (storage = sessionStorage);
       storage.setItem("token", response.access_token);
       storage.setItem("refresh_token", response.refresh_token);
-      console.log("response: ", response);
+      storage.setItem("expires_in", response.expires_in);
+      navigateTo("/");
     })
     .catch((error) => {
-      console.log("error: ", error);
-      errorLabel.innerHTML = error.message;
-      errorLabel.style.display = "block";
+      errorLabel.innerHTML = "Usuario o contraseña incorrectos";
+      errorLabel.style.opacity = 1;
     });
 }

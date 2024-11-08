@@ -117,7 +117,7 @@ button[type="submit"]:focus {
 
 .error {
   border: 1px solid red;
-  color: red;
+  color: rgb(255, 167, 167);
 }
 
 .errorField {

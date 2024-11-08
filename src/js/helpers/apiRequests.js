@@ -19,6 +19,7 @@ export const apiRequest = (
   const headers = {
     Accept: "application/json",
     "Content-Type": "application/json",
+    "Access-Control-Allow-Origin": "*",
     ...options.headers,
   };
 
@@ -34,7 +35,11 @@ export const apiRequest = (
     fetchOptions.withCredentials = true;
 
   return new Promise((resolve, reject) => {
-    fetch(url, fetchOptions)
+    fetch(url, {
+      method: options.method,
+      headers,
+      body: fetchOptions.body,
+    })
       .then(async (response) => {
         const res = await response.json();
         res.status = response.status;
@@ -54,12 +59,13 @@ export const apiAuthRequest = (
 ) => {
   const token =
     localStorage.getItem("token") || sessionStorage.getItem("token");
+  if (!token) return Promise.reject({ message: "No autorizado" });
+  if (token) options.headers.Authorization = `Bearer ${token}`;
   return apiRequest(url, {
     body: options.body,
     method: options.method,
     headers: {
       ...options.headers,
-      Authorization: `Bearer ${token}`,
     },
   });
 };

@@ -63,13 +63,12 @@ footer {
   margin: 0 auto;
 }
 
-.error {
-  color: red;
-  margin-bottom: 10px;
+.errorField {
+  color: rgb(255, 162, 162);
   font-size: small;
   font-weight: bold;
   text-align: center;
-  display: none;
+  opacity: 0;
   border: 1px solid red;
   min-height: 1.5em;
   border-radius: 5px;
@@ -113,7 +112,7 @@ footer {
 }
 
 .boton_login {
-  margin-top: 20px;
+  margin-top: 1em;
 }
 
 .boton_login button {

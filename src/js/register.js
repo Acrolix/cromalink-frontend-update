@@ -17,14 +17,6 @@ getCountries().then((countries) => {
   });
 });
 
-// document.querySelectorAll(".casilla").forEach((casilla) => {
-//   casilla.addEventListener("focusin", (e) => {
-//     e.preventDefault();
-//     console.log("hola");
-//     casilla.classList.remove("error");
-//   });
-// });
-
 function register() {
   const data = {
     username: document.getElementById("username").value,
