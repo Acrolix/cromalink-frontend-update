@@ -1,5 +1,5 @@
 import { authRegister } from "./services/authService.js";
-import getCountries from "./services/getCountries.js";
+import { getCountries } from "./services/countryService.js";
 import { navigateTo } from "./helpers/generics.js";
 
 const form = document.querySelector(".register_formulario");
