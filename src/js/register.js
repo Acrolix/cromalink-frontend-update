@@ -1,10 +1,19 @@
 import { authRegister } from "./services/authService.js";
 import getCountries from "./services/getCountries.js";
-const loginForm = document.querySelector(".register_formulario");
+import { navigateTo } from "./helpers/generics.js";
 
-loginForm.addEventListener("submit", (e) => {
+const form = document.querySelector(".register_formulario");
+
+form.addEventListener("submit", (e) => {
   e.preventDefault();
   register();
+});
+
+const show_password = document.querySelector(".toggle-password");
+
+show_password.addEventListener("click", () => {
+  const password = document.getElementById("password");
+  password.type = password.type === "password" ? "text" : "password";
 });
 
 getCountries().then((countries) => {
@@ -30,11 +39,19 @@ function register() {
       .value,
   };
 
-  console.log("data: ", data);
-
   authRegister(data, { method: "POST" })
     .then((response) => {
-      console.log("response: ", response);
+      const submit = document.getElementById("registerSubmit");
+      submit.classList.add("registerSuccess");
+      let flag = 5;
+      submit.textContent = `Registrado Correctamente ${flag}`;
+      setInterval(() => {
+        flag--;
+        submit.textContent = `Registrado Correctamente ${flag}`;
+        if (flag == 0) navigateTo("/login");
+      }, 1000);
+
+      // return navigateTo("/login");
     })
     .catch((error) => {
       console.log("error: ", error);
@@ -53,7 +70,6 @@ function register() {
             if (!fieldElement.classList.contains("error")) {
               fieldElement.classList.add("error");
               fieldElement.addEventListener("focus", () => {
-                console.log("hola");
                 fieldElement.classList.remove("error");
                 errorDiv.style.display = "none";
               });

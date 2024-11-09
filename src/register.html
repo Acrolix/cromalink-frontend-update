@@ -99,34 +99,39 @@
           </div>
           <div class="fieldGroup">
             <div class="field">
-              <input
-                class="casilla"
-                type="password"
-                id="password"
-                name="password"
-                required
-                placeholder="Contraseña"
-                autocomplete="new-password"
-                value="Prueba.321"
-              />
+              <div class="password-container">
+                <input
+                  class="casilla"
+                  type="password"
+                  id="password"
+                  name="password"
+                  required
+                  placeholder="Contraseña"
+                  autocomplete="new-password"
+                  value="Prueba.321"
+                />
+                <span class="toggle-password"> 👁️ </span>
+              </div>
               <div class="errorField" id="errorContraseña"></div>
             </div>
             <div class="field">
-              <input
-                class="casilla"
-                type="password"
-                id="password_confirmation"
-                name="password_confirmation"
-                required
-                placeholder="Confirmación de contraseña"
-                autocomplete="new-password"
-                value="Prueba.321"
-              />
+              <div class="password-container">
+                <input
+                  class="casilla"
+                  type="password"
+                  id="password_confirmation"
+                  name="password_confirmation"
+                  required
+                  placeholder="Confirmación de contraseña"
+                  autocomplete="new-password"
+                  value="Prueba.321"
+                />
+              </div>
               <div class="errorField" id="errorConfirmarContraseña"></div>
             </div>
           </div>
 
-          <button type="submit">Continuar</button>
+          <button id="registerSubmit" type="submit">Continuar</button>
           <p class="login_link">
             Ya tienes una cuenta?
             <a href="login">Iniciar Sesión</a>

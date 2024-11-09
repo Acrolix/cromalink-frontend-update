@@ -43,11 +43,11 @@ export const apiRequest = (
       .then(async (response) => {
         const res = await response.json();
         res.status = response.status;
-        if (response.status === 200) return resolve(res);
+        if (response.status >= 200 && response.status <= 299)
+          return resolve(res);
         return reject(res);
       })
       .catch((error) => {
-        console.error(error);
         return reject({ message: "Se produjo un error en el servidor" });
       });
   });
@@ -59,8 +59,10 @@ export const apiAuthRequest = (
 ) => {
   const token =
     localStorage.getItem("token") || sessionStorage.getItem("token");
+
   if (!token) return Promise.reject({ message: "No autorizado" });
-  if (token) options.headers.Authorization = `Bearer ${token}`;
+
+  options.headers.Authorization = `Bearer ${token}`;
   return apiRequest(url, {
     body: options.body,
     method: options.method,
