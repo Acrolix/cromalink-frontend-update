@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
+    <title>Login - Cromalink</title>
+    <link rel="icon" href="img/cromalink-logo.svg" />
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/login.css" />
   </head>
@@ -23,7 +24,7 @@
         <form>
           <div class="input_text">
             <input
-              type="text"
+              type="email"
               name="username"
               id="username"
               placeholder="ejemplo@dominio.com"
@@ -43,13 +44,14 @@
             <label for="remember_me">Recordarme</label>
             <input type="checkbox" name="remember_me" id="remember_me" />
           </div>
-          <div class="error" id="errorLabel"></div>
+
           <div class="boton_login">
             <button type="submit">Entrar</button>
           </div>
           <p class="registrar_link">
             ¿No tienes cuenta? <a href="register">Regístrate aquí</a>
           </p>
+          <div class="errorField" id="errorLabel"></div>
         </form>
       </div>
     </div>
