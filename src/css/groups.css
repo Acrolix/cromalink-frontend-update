@@ -1,5 +1,6 @@
 
 body {
+    box-sizing: border-box;
     margin: 0;
     font-family: Arial, sans-serif;
     display: flex;
@@ -90,12 +91,19 @@ body {
     font-size: 1em;
     color: #ffffff;
   }
+
+  .titulo_seccion {
+    color: #60c0e2;
+    font-size: 30px;
+    margin-bottom: 20px;
+    margin-left: 70px;
+  }
   
   .lista_grupos {
     display: flex;
     flex-direction: column;
     gap: 60px;
-    margin-top: 80px;
+    margin-top: 60px;
     margin-left: 40px;
   }
   
@@ -145,5 +153,4 @@ body {
     background-color: #ffb31c;
     color: black;
   }
-  
   
