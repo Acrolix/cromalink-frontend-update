@@ -1,48 +1,149 @@
-.lista_grupos {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px;
-}
 
-.grupo {
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .contenedor {
+    display: flex;
+    width: 100%;
+  }
+  
+  .barra_lateral {
+    background-color: #182529;
+    width: 250px;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    overflow-y: auto; 
+    z-index: 10;
+  }
+  
+  .barra_lateral a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 0;
+    display: block;
+  }
+  
+  .barra_lateral a i {
+    margin-right: 10px;
+  }
+  
+  .barra_lateral img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .barra_lateral .line {
+    border-top: 1px dashed #7f8c8d;
+    margin: 20px 0;
+  }
+  
+  .foto_perfil {
+    width: 100%;
+    height: 100px;
+    background-color: #7f8c8d;
+    border-radius: 50%;
+    margin-top: 20px;
+  }
+  
+  .contenido {
+    margin-left: 250px;
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  
+  .barra_busqueda {
+    background-color: #424241;
+    border-radius: 40px;
+    border: 2px solid #424241;
+    box-sizing: border-box;
+    padding: 15px;
     display: flex;
     align-items: center;
-    background-color: #333;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.imagen_grupo {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    margin-right: 15px;
-}
-
-.info_grupo {
-    flex: 1;
-}
-
-.nombre_grupo {
-    font-size: 1.2em;
-    color: #ccc;
-}
-
-.descripcion_grupo {
-    color: #f7d628
-}
-
-.btn_unirse {
-    background-color: #3b6252;
-    color: white;
+    width: 300px;
+    margin: 20px auto;
+    box-shadow: 0px 2px 5px rgba(37, 37, 37, 0.5);
     border: none;
-    padding: 8px 12px;
+    outline: none;
+    flex-grow: 1;
+  }
+  .barra_busqueda i {
+    color: #888;
+    margin-right: 10px;
+    font-size: 1.2em;
+  }
+  
+  .barra_busqueda input[type="text"] {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    flex-grow: 1;
+    font-size: 1em;
+    color: #ffffff;
+  }
+  
+  .lista_grupos {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    margin-top: 80px;
+    margin-left: 40px;
+  }
+  
+  .grupo {
+    display: flex;
+    align-items: center;
+    background-color: #34495e;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .imagen_grupo {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-right: 20px;
+  }
+  
+  .info_grupo {
+    flex: 1;
+  }
+  
+  .nombre_grupo {
+    font-size: 20px;
+    margin: 0;
+    color: #eee;
+  }
+  
+  .descripcion_grupo {
+    font-size: 14px;
+    color: #ffb31c;
+    margin: 5px 0;
+  }
+  
+  .btn_unirse {
+    background-color: #182529;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
     border-radius: 5px;
     cursor: pointer;
-}
-
-.btn_unirse:hover {
-    background-color: #0056b3;
-}
+  }
+  
+  .btn_unirse:hover {
+    background-color: #ffb31c;
+    color: black;
+  }
+  
+  
