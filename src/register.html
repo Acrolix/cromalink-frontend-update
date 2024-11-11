@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro - Cromalink</title>
+    <link rel="icon" href="img/cromalink-logo.svg" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/register.css" />
+  </head>
+  <body>
+    <!-- <script type="module" src="/js/middleware/auth.js"></script> -->
+    <div class="container">
+      <div class="cromalink_slogan">
+        <h1>Bienvenidos</h1>
+        <img src="img/logo.svg" alt="CromaLink Logo" />
+        <p class="slogan">A traves del camino del mundo arte</p>
+      </div>
+      <div class="register_formulario">
+        <div class="logo_registro">
+          <img src="img/logo.svg" alt="CromaLink Logo" />
+        </div>
+        <h2>Registro</h2>
+        <form>
+          <div class="field">
+            <input
+              class="casilla"
+              type="text"
+              id="username"
+              name="username"
+              required
+              placeholder="Usuario"
+              autocomplete="username"
+              value="pruebauser"
+            />
+            <div class="errorField" id="errorUsuario"></div>
+          </div>
+          <div class="fieldGroup">
+            <div class="field">
+              <input
+                class="casilla"
+                type="text"
+                id="first_name"
+                name="first_name"
+                required
+                placeholder="Nombre"
+                autocomplete="given-name"
+                value="pruebaNombre"
+              />
+              <div class="errorField" id="errorNombre"></div>
+            </div>
+            <div class="field">
+              <input
+                class="casilla"
+                type="text"
+                id="last_name"
+                name="last_name"
+                required
+                placeholder="Apellido"
+                autocomplete="family-name"
+                value="pruebaApellido"
+              />
+              <div class="errorField" id="errorApellido"></div>
+            </div>
+          </div>
+          <div class="field">
+            <input
+              class="casilla"
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="Email"
+              autocomplete="email"
+              value="prueba@test.com"
+            />
+            <div class="errorField" id="errorEmail"></div>
+          </div>
+          <div class="fieldGroup">
+            <div class="field">
+              <input
+                class="casilla"
+                type="date"
+                id="birth_date"
+                name="birth_date"
+                required
+                placeholder="Fecha de Nacimiento"
+                autocomplete="bday"
+                value="1990-01-01"
+              />
+              <div class="errorField" id="errorFechaNacimiento"></div>
+            </div>
+            <div class="field">
+              <select name="country_code" id="country_code" class="casilla">
+                <option value="">Seleccionar país</option>
+              </select>
+              <div class="errorField" id="errorcountryCode"></div>
+            </div>
+          </div>
+          <div class="fieldGroup">
+            <div class="field">
+              <div class="password-container">
+                <input
+                  class="casilla"
+                  type="password"
+                  id="password"
+                  name="password"
+                  required
+                  placeholder="Contraseña"
+                  autocomplete="new-password"
+                  value="Prueba.321"
+                />
+                <span class="toggle-password"> 👁️ </span>
+              </div>
+              <div class="errorField" id="errorContraseña"></div>
+            </div>
+            <div class="field">
+              <div class="password-container">
+                <input
+                  class="casilla"
+                  type="password"
+                  id="password_confirmation"
+                  name="password_confirmation"
+                  required
+                  placeholder="Confirmación de contraseña"
+                  autocomplete="new-password"
+                  value="Prueba.321"
+                />
+              </div>
+              <div class="errorField" id="errorConfirmarContraseña"></div>
+            </div>
+          </div>
+
+          <button id="registerSubmit" type="submit">Continuar</button>
+          <p class="login_link">
+            Ya tienes una cuenta?
+            <a href="login">Iniciar Sesión</a>
+          </p>
+        </form>
+      </div>
+    </div>
+    <footer>
+      <div class="acrolix_footer">
+        <img src="img/acrolix.svg" alt="Acrolix Logo" />
+      </div>
+    </footer>
+    <script type="module" src="js/register.js"></script>
+  </body>
+</html>

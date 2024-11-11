@@ -1,0 +1,233 @@
+body {
+  background-image: url("/img/home_Acrolix.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  color: white;
+  font-size: 2em;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+h2 {
+  color: #ffffff;
+  font-size: 1em;
+}
+
+footer {
+  align-items: center;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+}
+
+label {
+  color: white;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input,
+.casilla {
+  background-color: #424241;
+  border: 2px solid #424241;
+  border-radius: 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  color: #ffffff;
+  font-size: 15px;
+  margin-bottom: 0.8em;
+  padding: 15px;
+  transition: border-color 0.5s ease;
+  width: 100%;
+}
+
+input:focus,
+select:focus {
+  border-color: #e9a21f;
+  outline: none;
+}
+
+#registerSubmit {
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 20px;
+  color: #242424;
+  cursor: pointer;
+  font-family: "Roboto";
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-top: 20px;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+#registerSubmit:hover {
+  background-color: var(--secondary-color);
+}
+
+#registerSubmit:focus {
+  outline: 2px solid #e9a21f;
+}
+
+.container {
+  align-items: center;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr;
+  height: calc(100vh - 100px);
+  justify-content: center;
+  width: 100%;
+}
+
+.logo_registro img {
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+  height: 5em;
+}
+
+.register_formulario {
+  background-color: var(--tertiary-color);
+  border-radius: 40px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+  margin: 0 2em;
+  padding: 2em;
+  text-align: center;
+  width: 500px;
+}
+
+.cromalink_slogan {
+  align-items: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  font-size: 2em;
+  justify-content: center;
+  text-shadow: 2px 2px 8px #000000;
+}
+
+.cromalink_slogan img {
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+  margin: 0 auto;
+  width: 70%;
+}
+
+.error {
+  border: 1px solid red;
+  color: rgb(255, 167, 167);
+}
+
+.errorField {
+  background-color: rgba(255, 0, 0, 0.2);
+  border: 1px solid red;
+  border-radius: 5px;
+  color: #ffbbbb;
+  display: none;
+  font-size: small;
+  font-weight: bold;
+  margin-bottom: 10px;
+  min-height: 1.5em;
+  text-align: center;
+  padding: 0.2em;
+}
+
+.login_link {
+  color: #ffffff;
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+.login_link a {
+  color: var(--primary-color);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.dev {
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.acrolix_footer {
+  align-items: center;
+  display: flex;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+}
+
+.acrolix_footer img {
+  height: 60%;
+  margin-left: 10px;
+}
+
+.acrolix_footer span {
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: row;
+}
+
+.field {
+  margin-right: 1em;
+  width: 100%;
+}
+
+.field:last-child {
+  margin-right: 0;
+}
+
+.fieldError {
+  border-color: red;
+}
+
+.registerSuccess {
+  background-color: rgba(0, 255, 0, 0.5) !important;
+  color: #fff !important;
+  font-size: 1em !important;
+  padding: 1em 0 !important;
+}
+
+.password-container {
+  position: relative;
+  width: 100%;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 15px;
+  top: 40%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  user-select: none;
+  line-height: 1;
+}
+
+@media (max-width: 1145px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .cromalink_slogan {
+    display: none;
+  }
+
+  .register_formulario {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 520px) {
+  .register_formulario {
+    width: 80%;
+  }
+}

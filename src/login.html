@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Cromalink</title>
+    <link rel="icon" href="img/cromalink-logo.svg" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/login.css" />
+  </head>
+  <body>
+    <script type="module" src="/js/middleware/auth.js"></script>
+    <div class="container">
+      <div class="cromalink_slogan">
+        <h1>Bienvenidos</h1>
+        <img src="img/logo.svg" alt="CromaLink Logo" />
+        <p class="slogan">A traves del camino del mundo arte</p>
+      </div>
+      <div class="login_formulario">
+        <div class="logo_login">
+          <img src="img/logo.svg" alt="CromaLink Logo" />
+        </div>
+        <h2>Iniciar Sesión</h2>
+        <form>
+          <div class="input_text">
+            <input
+              type="email"
+              name="username"
+              id="username"
+              placeholder="ejemplo@dominio.com"
+              required
+            />
+          </div>
+          <div class="input_text">
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="****************"
+              required
+            />
+          </div>
+          <div class="remember_me">
+            <label for="remember_me">Recordarme</label>
+            <input type="checkbox" name="remember_me" id="remember_me" />
+          </div>
+
+          <div class="boton_login">
+            <button type="submit">Entrar</button>
+          </div>
+          <p class="registrar_link">
+            ¿No tienes cuenta? <a href="register">Regístrate aquí</a>
+          </p>
+          <div class="errorField" id="errorLabel"></div>
+        </form>
+      </div>
+    </div>
+    <footer>
+      <div class="acrolix_footer">
+        <img src="img/acrolix.svg" alt="Acrolix Logo" />
+      </div>
+    </footer>
+    <script type="module" src="js/login.js"></script>
+  </body>
+</html>
