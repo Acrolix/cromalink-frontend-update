@@ -1,7 +1,7 @@
-import { apiAuthRequest, apiRequest } from "../helpers/apiRequests";
+import { apiAuthRequest, apiRequest } from "../helpers/apiRequests.js";
 
-export const authLogin = (username, password) => {
-  return apiRequest("/auth/login", {
+export const authLogin = async (username, password) => {
+  return await apiRequest("/auth/login", {
     method: "POST",
     body: {
       email: username,
@@ -10,24 +10,24 @@ export const authLogin = (username, password) => {
   });
 };
 
-export const authRegister = ({
+export const authRegister = async ({
   username,
   first_name,
   last_name,
   email,
-  birthdate,
+  birth_date,
   country_code,
   password,
   password_confirmation,
 }) => {
-  return apiRequest("/auth/register", {
+  return await apiRequest("/auth/register", {
     method: "POST",
     body: {
       username,
       first_name,
       last_name,
       email,
-      birthdate,
+      birth_date,
       country_code,
       password,
       password_confirmation,
@@ -35,14 +35,14 @@ export const authRegister = ({
   });
 };
 
-export const authLogout = () => {
+export const authLogout = async () => {
   localStorage.clear();
   sessionStorage.clear();
-  return apiAuthRequest("/auth/logout", {
+  return await apiAuthRequest("/auth/logout", {
     method: "POST",
   });
 };
 
-export const authVerify = () => {
-  return apiAuthRequest("/auth/verify");
+export const authVerify = async () => {
+  return await apiAuthRequest("/auth/verify");
 };
