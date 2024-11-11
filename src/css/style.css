@@ -206,3 +206,10 @@ a{
   position: relative;
   left: 100%;
 }
+
+.menu-ajustes {
+  display: flex;
+  flex-direction: column;
+  margin-left: 300px;
+}
+
