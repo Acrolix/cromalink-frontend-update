@@ -3,73 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cromalink - Profile</title>
-    <link rel="stylesheet" href="/css/barralateral.css">
-    <link rel="stylesheet" href="/css/profile.css">
-    <link rel="stylesheet" href="/css/galeria.css">
+    <title>Profile - CromaLink</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/barrralateral.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div class="contenedor">
+    <div class="container">
         <div class="barra_lateral">
             <div class="logo">
                 <img src="/img/logo.svg" alt="logo">
             </div>
-                <a href="profile.html"><i class="fa-solid fa-user"></i></i>Perfil</a>
-                <a href="post.html"><i class="fas fa-plus"></i> Add Post</a>
-                <a href="story.html"><i class="fas fa-book"></i> My Stories</a>
-                <a href="message.html"><i class="fas fa-envelope"></i> Messages</a>
-                <a href="groups.html"><i class="fas fa-address-book"></i> Groups</a>
-                <a href=""><i class="fas fa-paper-plane"></i> Share</a>
+            <a href="profile.html"><i class="fa-solid fa-user"></i>Perfil</a>
+            <a href="post.html"><i class="fas fa-plus"></i> Add Post</a>
+            <a href="story.html"><i class="fas fa-book"></i> My Stories</a>
+            <a href="message.html"><i class="fas fa-envelope"></i> Messages</a>
+            <a href="groups.html" class="active"><i class="fas fa-address-book"></i> Groups</a>
+            <a href=""><i class="fas fa-paper-plane"></i> Share</a>
             <hr class="line">
-                    <a href="config.html"><i class="fas fa-cog"></i> Config</a>
-                    <a href="login.html"><i class="fas fa-power-off"></i> Exit</a>
-            <div class="foto_perfil">
-            </div>
+            <a href="config.html"><i class="fas fa-cog"></i> Config</a>
+            <a href="login.html"><i class="fas fa-power-off"></i> Exit</a>
         </div>
-        <div class="contenido">
-            <div class="barra_busqueda">
-                <i class="fas fa-search"></i>
-                <input type="text" placeholder="Buscar">
-            </div>
-            <div class="perfil">
-                
-                <div class="perfil-header">
-                    <img src="/img/profile.jpg" alt="Foto de perfil" class="foto_perfil_grande">
-                    <div class="perfil-info">
-                        <h2 class="profilename">Martín Lorenzo</h2>
-                       
-                        <p class="bio">Me llamo Martín Lorenzo, soy desarrollador web, me encanta compartir mis costumbres y visitar lugares en el mundo.</p>
-                        
-                        <div class="estadisticas">
-                            <span><strong>120</strong> Publicaciones</span>
-                            <span><strong>450</strong> Seguidores</span>
-                            <span><strong>300</strong> Seguidos</span>
-                           
+        
+        <main class="main-content">
+            <header class="profile-header">
+                <div class="profile-pic">
+                    <img src="/img/profile.png" alt="Foto de Perfil">
+                </div>
+                <div class="user-details">
+                    <h1>Raven Harmony</h1>
+                    <p class="bio">22 | Belgian Violinist | <span>Music is my lifeblood.</span> Currently based in Brussels.</p>
+                    <p class="username">@RavenHarmony07</p>
+                    <div class="stats">
+                        <div class="stat">
+                            <span>18</span>
+                            <p>Posts</p>
                         </div>
-                        <label for="upload-photo" class="custom-file-upload">
-                            <i class="fas fa-upload"></i> 
-                          </label>
-                          <input type="file" id="upload-photo" style="display: none;">
-                        
+                        <div class="stat">
+                            <span>256K</span>
+                            <p>Followers</p>
+                        </div>
+                        <div class="stat">
+                            <span>1.7K</span>
+                            <p>Following</p>
+                        </div>
                     </div>
                 </div>
-                <hr>
-
-                
-                <div class="galeria">
-                    <div class="post"><img src="/img/post1.jpg" alt="Post 1"></div>
-                    <div class="post"><img src="/img/post2.jpg" alt="Post 2"></div>
-                    <div class="post"><img src="/img/post3.jpg" alt="Post 3"></div>
-                    <div class="post"><img src="/img/post4.jpg" alt="Post 4"></div>
-                    <div class="post"><img src="/img/post5.jpg" alt="Post 5"></div>
-                    <div class="post"><img src="/img/post6.jpg" alt="Post 6"></div>
-                    
+                <div class="actions">
+                    <button class="edit-profile">Edit Profile</button>
+                    <button class="share-profile">Share Profile</button>
                 </div>
-            </div>
-        </div>
+            </header>
+
+            <section class="highlights">
+                <div class="highlight"><i class="fas fa-music"></i></div>
+                <div class="highlight"><i class="fas fa-guitar"></i></div>
+                <div class="highlight"><i class="fas fa-record-vinyl"></i></div>
+                <div class="highlight add"><i class="fas fa-plus"></i></div>
+            </section>
+
+            <section class="gallery">
+                <div class="gallery-item"><img src="/img/post1.jpg" alt="Imagen 1"></div>
+                <div class="gallery-item"><img src="/img/post2.jpg" alt="Imagen 2"></div>
+                <div class="gallery-item"><img src="/img/post3.jpg" alt="Imagen 3"></div>
+                <div class="gallery-item"><img src="/img/post4.jpg" alt="Imagen 4"></div>
+                <div class="gallery-item"><img src="/img/post5.jpg" alt="Imagen 5"></div>
+                <div class="gallery-item"><img src="/img/post6.jpg" alt="Imagen 6"></div>
+            </section>
+        </main>
     </div>
-    <script src="/js/app.js"></script>
-    <script src="js/config.js"></script>
 </body>
 </html>
