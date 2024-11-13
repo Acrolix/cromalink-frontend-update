@@ -32,4 +32,13 @@
   margin: 20px 0;
 }
 
+@media (max-width: 768px) {
+  .barra_lateral {
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    bottom: 0;
+  }
+}
 
