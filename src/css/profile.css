@@ -49,14 +49,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid #444;
+  border-bottom: 1px solid #ecf0f1;
   padding-bottom: 20px;
 }
 
 .user {
   color: #60C0E2;
   margin-bottom: 30px;
-  margin-top: 30px;
+  margin-top: 17px;
 }
 
 
@@ -87,15 +87,31 @@ body {
 }
 
 .username {
+  margin-bottom: 30px;
   font-size: 14px;
-  color: #888;
-  margin-bottom: 10px;
+  color: #ffff;
+  margin: 0;
+}
+
+.icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 4px;
 }
 
 .stats {
   display: flex;
-  gap: 20px;
+  gap: 100px;
   margin-top: 10px;
+  margin-left: 250px;
+}
+
+.stat {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
 }
 
 .stat span {
@@ -109,9 +125,20 @@ body {
   color: #888;
 }
 
+.icon_menu {
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   margin-left: 100px;
+   margin-bottom: 150px;
+}
+
 .actions {
   display: flex;
   gap: 10px;
+  margin-bottom: 30px;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 button {
@@ -131,7 +158,7 @@ button:hover {
 
 .highlights {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 20px;
   padding: 20px 0;
 }
@@ -167,6 +194,53 @@ button:hover {
 
 .barra_inferior {
   display: none;
+}
+
+.image-carrousel img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #0a86ac;
+}
+
+.carrousel {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.plus-icon {
+  width: 120px; 
+  height: 120px;
+  background-color: #555; 
+  border-radius: 50%;
+  border: 2px solid #00bfff; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.plus-icon::before,
+.plus-icon::after {
+  content: "";
+  position: absolute;
+  background-color: #ff9900; 
+  border-radius: 3px; 
+}
+
+.plus-icon::before {
+  width: 8px;
+  height: 80%; 
+}
+
+.plus-icon::after {
+  width: 80%;
+  height: 8px;
+}
+
+.gallery-icons {
+   display: flex; 
+   justify-content:space-around;
 }
 
 @media (max-width: 768px) {
@@ -229,10 +303,23 @@ button:hover {
   
   .username {
     font-size: 14px;
-    color: #888;
-    margin-bottom: 10px;
+    color: #ffff;
+    margin: 0;
   }
   
+  .image-carrousel img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #0a86ac;
+  }
+
+  .carrousel {
+     display: flex;
+     justify-content: center;
+     gap: 20px;
+  }
+
   .stats {
     display: flex;
     gap: 60px;
@@ -250,13 +337,21 @@ button:hover {
     font-size: 14px;
     color: #888;
   }
+
+  .icon_menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 2px;
+    margin-bottom: 150px;
+ }
   
   .actions {
         display: flex;
         gap: 30px;
         margin-bottom: 30px;
         margin-top: 30px;
-        justify-content: normal;
+        justify-content: space-evenly;
   }
   
   button {
@@ -278,8 +373,40 @@ button:hover {
     justify-content: center;
   }
 
+
   .gallery {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  
+  .plus-icon {
+    width: 120px; 
+    height: 120px;
+    background-color: #555; 
+    border-radius: 50%;
+    border: 2px solid #00bfff; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .plus-icon::before,
+  .plus-icon::after {
+    content: "";
+    position: absolute;
+    background-color: #ff9900; 
+    border-radius: 3px; 
+  }
+  
+  .plus-icon::before {
+    width: 8px;
+    height: 80%; 
+  }
+  
+  .plus-icon::after {
+    width: 80%;
+    height: 8px;
   }
 }
 
