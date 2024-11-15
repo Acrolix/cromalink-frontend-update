@@ -53,6 +53,7 @@ body {
   padding-bottom: 20px;
 }
 
+
 .user {
   color: #60C0E2;
   margin-bottom: 30px;
@@ -62,6 +63,10 @@ body {
 
 .user_name_profile {
   margin-top: 20px;
+}
+
+.edit-profile p:hover {
+  color: #FFD700;
 }
 
 .profile-pic img {
@@ -148,6 +153,22 @@ body {
   padding: 20px 0;
 }
 
+.gallery-icons a {
+  color: #FFF;
+}
+
+.gallery-icons a:hover {
+  color: #FFD700;
+}
+
+.plus-icon:hover{
+  color: #FFD700;
+}
+
+.image-carrousel img:hover {
+  border: 3px solid #FFD700;
+}
+
 button {
   background-color: #333;
   color: #FFF;
@@ -158,8 +179,10 @@ button {
   font-size: 14px;
 }
 
+
 button:hover {
   background-color: #444;
+  color: #fb9f28;
 }
 
 
@@ -257,7 +280,7 @@ button:hover {
     gap: 20px;
     padding: 20px 0;
   }
-  
+
   .container {
     flex-direction: column;
   }
