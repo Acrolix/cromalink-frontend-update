@@ -1,161 +1,3 @@
-<<<<<<< HEAD
-
-body {
-    box-sizing: border-box;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    display: flex;
-    height: 100vh;
-    overflow: hidden;
-  }
-  
-  .contenedor {
-    display: flex;
-    width: 100%;
-  }
-  
-  .barra_lateral {
-    background-color: #182529;
-    width: 250px;
-    padding: 20px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    overflow-y: auto; 
-    z-index: 10;
-  }
-  
-  .barra_lateral a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 10px 0;
-    display: block;
-  }
-  
-  .barra_lateral a i {
-    margin-right: 10px;
-  }
-  
-  .barra_lateral img {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  
-  .barra_lateral .line {
-    border-top: 1px dashed #7f8c8d;
-    margin: 20px 0;
-  }
-  
-  .foto_perfil {
-    width: 100%;
-    height: 100px;
-    background-color: #7f8c8d;
-    border-radius: 50%;
-    margin-top: 20px;
-  }
-  
-  .contenido {
-    margin-left: 250px;
-    flex: 1;
-    padding: 20px;
-    overflow-y: auto;
-  }
-  
-  .barra_busqueda {
-    background-color: #424241;
-    border-radius: 40px;
-    border: 2px solid #424241;
-    box-sizing: border-box;
-    padding: 15px;
-    display: flex;
-    align-items: center;
-    width: 300px;
-    margin: 20px auto;
-    box-shadow: 0px 2px 5px rgba(37, 37, 37, 0.5);
-    border: none;
-    outline: none;
-    flex-grow: 1;
-  }
-  .barra_busqueda i {
-    color: #888;
-    margin-right: 10px;
-    font-size: 1.2em;
-  }
-  
-  .barra_busqueda input[type="text"] {
-    border: none;
-    background-color: transparent;
-    outline: none;
-    flex-grow: 1;
-    font-size: 1em;
-    color: #ffffff;
-  }
-
-  .titulo_seccion {
-    color: #60c0e2;
-    font-size: 30px;
-    margin-bottom: 20px;
-    margin-left: 70px;
-  }
-  
-  .lista_grupos {
-    display: flex;
-    flex-direction: column;
-    gap: 29px;
-    margin-top: 40px;
-    margin-left: 40px;
-  }
-  
-  .grupo {
-    display: flex;
-    align-items: center;
-    background-color: #34495e;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .imagen_grupo {
-    width: 80px;
-    height: 80px;
-    border-radius: 8px;
-    object-fit: cover;
-    margin-right: 20px;
-  }
-  
-  .info_grupo {
-    flex: 1;
-  }
-  
-  .nombre_grupo {
-    font-size: 20px;
-    margin: 0;
-    color: #eee;
-  }
-  
-  .descripcion_grupo {
-    font-size: 14px;
-    color: #ffb31c;
-    margin: 5px 0;
-  }
-  
-  .btn_unirse {
-    background-color: #182529;
-    color: #ffffff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .btn_unirse:hover {
-    background-color: #ffb31c;
-    color: black;
-  }
-  
-=======
 * {
   margin: 0;
   padding: 0;
@@ -165,7 +7,7 @@ body {
 body {
   font-family: Arial, sans-serif;
   background-color: #1a1a1a;
-  color: #FFF;
+  color: #fff;
 }
 
 .container {
@@ -185,7 +27,7 @@ body {
   cursor: pointer;
   display: flex;
   align-items: center;
-  color: #FFF;
+  color: #fff;
   transition: background 0.3s;
 }
 
@@ -212,29 +54,28 @@ body {
 }
 
 .gallery img:hover {
-  border: 3px solid #FFD700;
+  border: 3px solid #ffd700;
 }
 
 .user {
-  color: #60C0E2;
+  color: #60c0e2;
   margin-bottom: 30px;
   margin-top: 17px;
 }
-
 
 .user_name_profile {
   margin-top: 20px;
 }
 
 .edit-profile p:hover {
-  color: #FFD700;
+  color: #ffd700;
 }
 
 .profile-pic img {
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  border: 3px solid #FFD700;
+  border: 3px solid #ffd700;
 }
 
 .user-details {
@@ -274,16 +115,16 @@ body {
 }
 
 .stat {
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .stat span {
   font-size: 20px;
   font-weight: bold;
-  color: #FFF;
+  color: #fff;
 }
 
 .stat p {
@@ -292,11 +133,11 @@ body {
 }
 
 .icon_menu {
-   display: flex;
-   flex-direction: column;
-   justify-content: flex-start;
-   margin-left: 100px;
-   margin-bottom: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 100px;
+  margin-bottom: 150px;
 }
 
 .actions {
@@ -307,7 +148,7 @@ body {
   justify-content: space-evenly;
 }
 
-.iconos-gallery{
+.iconos-gallery {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -315,24 +156,24 @@ body {
 }
 
 .gallery-icons a {
-  color: #FFF;
+  color: #fff;
 }
 
 .gallery-icons a:hover {
-  color: #FFD700;
+  color: #ffd700;
 }
 
-.plus-icon:hover{
-  color: #FFD700;
+.plus-icon:hover {
+  color: #ffd700;
 }
 
 .image-carrousel img:hover {
-  border: 3px solid #FFD700;
+  border: 3px solid #ffd700;
 }
 
 button {
   background-color: #333;
-  color: #FFF;
+  color: #fff;
   border: none;
   padding: 10px 15px;
   border-radius: 8px;
@@ -340,12 +181,10 @@ button {
   font-size: 14px;
 }
 
-
 button:hover {
   background-color: #444;
   color: #fb9f28;
 }
-
 
 .highlights {
   display: flex;
@@ -362,12 +201,12 @@ button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #FFF;
+  color: #fff;
   font-size: 26px;
 }
 
 .highlight.add {
-  background-color: #FFD700;
+  background-color: #ffd700;
 }
 
 .gallery {
@@ -400,11 +239,11 @@ button:hover {
 }
 
 .plus-icon {
-  width: 120px; 
+  width: 120px;
   height: 120px;
-  background-color: #555; 
+  background-color: #555;
   border-radius: 50%;
-  border: 2px solid #00bfff; 
+  border: 2px solid #00bfff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -415,13 +254,13 @@ button:hover {
 .plus-icon::after {
   content: "";
   position: absolute;
-  background-color: #ff9900; 
-  border-radius: 3px; 
+  background-color: #ff9900;
+  border-radius: 3px;
 }
 
 .plus-icon::before {
   width: 8px;
-  height: 80%; 
+  height: 80%;
 }
 
 .plus-icon::after {
@@ -430,12 +269,12 @@ button:hover {
 }
 
 .gallery-icons {
-   display: flex; 
-   justify-content:space-around;
+  display: flex;
+  justify-content: space-around;
 }
 
 @media (max-width: 768px) {
-  .iconos-gallery{
+  .iconos-gallery {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -449,7 +288,6 @@ button:hover {
   .main-content {
     margin-left: 0;
   }
-
 
   .menu {
     display: flex;
@@ -476,35 +314,35 @@ button:hover {
     border-bottom: 1px solid #ecf0f1;
     padding-bottom: 20px;
   }
-  
+
   .profile-pic img {
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    border: 3px solid #FFD700;
+    border: 3px solid #ffd700;
   }
-  
+
   .user-details {
     flex: 1;
     margin-left: 20px;
   }
-  
+
   .user-details h1 {
     font-size: 28px;
     margin-bottom: 5px;
   }
-  
+
   .bio {
     font-size: 16px;
     color: #fb9f28;
   }
-  
+
   .username {
     font-size: 14px;
     color: #ffff;
     margin: 0;
   }
-  
+
   .image-carrousel img {
     width: 120px;
     height: 120px;
@@ -513,9 +351,9 @@ button:hover {
   }
 
   .carrousel {
-     display: flex;
-     justify-content: center;
-     gap: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
   }
 
   .stats {
@@ -524,13 +362,13 @@ button:hover {
     margin-top: 10px;
     margin-left: 150px;
   }
-  
+
   .stat span {
     font-size: 20px;
     font-weight: bold;
-    color: #FFF;
+    color: #fff;
   }
-  
+
   .stat p {
     font-size: 14px;
     color: #888;
@@ -542,75 +380,71 @@ button:hover {
     justify-content: flex-start;
     margin-left: 2px;
     margin-bottom: 150px;
- }
-  
-  .actions {
-        display: flex;
-        gap: 30px;
-        margin-bottom: 30px;
-        margin-top: 30px;
-        justify-content: space-evenly;
   }
-  
+
+  .actions {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    justify-content: space-evenly;
+  }
+
   button {
     background-color: #333;
-    color: #FFF;
+    color: #fff;
     border: none;
     padding: 10px 15px;
     border-radius: 8px;
     cursor: pointer;
     font-size: 14px;
   }
-  
+
   button:hover {
     background-color: #444;
   }
-  
 
   .highlights {
     justify-content: center;
   }
 
-
   .gallery {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  
   .plus-icon {
-    width: 120px; 
+    width: 120px;
     height: 120px;
-    background-color: #555; 
+    background-color: #555;
     border-radius: 50%;
-    border: 2px solid #00bfff; 
+    border: 2px solid #00bfff;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
   }
-  
+
   .plus-icon::before,
   .plus-icon::after {
     content: "";
     position: absolute;
-    background-color: #ff9900; 
-    border-radius: 3px; 
+    background-color: #ff9900;
+    border-radius: 3px;
   }
-  
+
   .plus-icon::before {
     width: 8px;
-    height: 80%; 
+    height: 80%;
   }
-  
+
   .plus-icon::after {
     width: 80%;
     height: 8px;
   }
 }
 
-
 @media (max-width: 768px) {
-  .barra_inferior{
+  .barra_inferior {
     width: 100%;
     height: auto;
     padding: 10px;
@@ -620,17 +454,16 @@ button:hover {
     align-items: center;
     flex-direction: row;
     background-color: #182529;
-    order: 1; 
+    order: 1;
   }
 
-   .barra_inferior i{
-      color: #ffff;  
-   }
+  .barra_inferior i {
+    color: #ffff;
+  }
 
-   .barra_lateral {
-     display: none;
-   }
-
+  .barra_lateral {
+    display: none;
+  }
 
   .barra_lateral.oculta {
     display: none;
@@ -672,7 +505,7 @@ button:hover {
   }
 
   .barra_inferior a i {
-    font-size: 24px; 
+    font-size: 24px;
   }
 
   .barra_inferior img {
@@ -690,7 +523,7 @@ button:hover {
   .contenido {
     margin-left: 0;
     padding: 10px;
-    order: 0; 
+    order: 0;
   }
 
   .barra_busqueda {
@@ -705,9 +538,9 @@ button:hover {
     padding: 10px;
   }
 
- .line {
-   display: none;
- }
+  .line {
+    display: none;
+  }
 
   .sub-contenido {
     font-size: 16px;
@@ -754,7 +587,7 @@ button:hover {
 .nombre_grupo {
   font-size: 18px;
   font-weight: bold;
-  color: #00aced; 
+  color: #00aced;
   margin: 0;
 }
 
@@ -790,7 +623,3 @@ button:hover {
 .btn_unirse i {
   font-size: 16px;
 }
-
-
-
->>>>>>> profile
