@@ -141,6 +141,13 @@ body {
   justify-content: space-evenly;
 }
 
+.iconos-gallery{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 0;
+}
+
 button {
   background-color: #333;
   color: #FFF;
@@ -244,6 +251,13 @@ button:hover {
 }
 
 @media (max-width: 768px) {
+  .iconos-gallery{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
+  }
+  
   .container {
     flex-direction: column;
   }
